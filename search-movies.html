@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/bcf4e3b081.js"
+      crossorigin="anonymous"
+    ></script>
     <title>EasyMovie</title>
   </head>
   <body>
-    <section id="landing">
+    <section id="up">
       <div class="row">
         <nav>
           <figure class="logo--wrapper">
-            <img src="./assets/logo.png" class="logo" alt="" />
+            <a href="./">
+              <img src="./assets/logo.png" class="logo" alt="" />
+            </a>
           </figure>
           <ul class="nav__links">
             <li class="nav__link">
-              <a href="" class="nav__link--anchor">Home</a>
+              <a href="./" class="nav__link--anchor">Home</a>
             </li>
             <li class="nav__link">
-              <a href="./search-movies" class="nav__link--anchor"
+              <a href="./search-movies.html" class="nav__link--anchor"
                 >Search movies</a
               >
             </li>
@@ -29,6 +35,22 @@
             </li>
           </ul>
         </nav>
+        <header class="header">
+          <h1 class="header__title">Browse our Movies</h1>
+          <div class="browser--wrapper">
+            <div class="browser__input--wrapper">
+              <input
+                type="text"
+                class="browser__input"
+                placeholder="Search by title"
+                autofocus
+              />
+            </div>
+            <figure class="browser__img--wrapper">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </figure>
+          </div>
+        </header>
       </div>
     </section>
   </body>

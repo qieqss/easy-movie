@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <script src="app.js"></script>
     <script
       src="https://kit.fontawesome.com/bcf4e3b081.js"
@@ -18,14 +18,18 @@
       <div class="row">
         <nav>
           <figure class="logo--wrapper">
-            <img src="./assets/logo.png" class="logo" alt="" />
+            <a href="./">
+              <img src="./assets/logo.png" class="logo" alt="" />
+            </a>
           </figure>
           <ul class="nav__links">
             <li class="nav__link">
-              <a href="" class="nav__link--anchor">Home</a>
+              <a href="./" class="nav__link--anchor">Home</a>
             </li>
             <li class="nav__link">
-              <a href="./search-movies" class="nav__link--anchor">Search movies</a>
+              <a href="./search-movies.html" class="nav__link--anchor"
+                >Search movies</a
+              >
             </li>
             <li class="nav__link nav__link--primary">
               <a href="#">Contact</a>
@@ -46,7 +50,7 @@
             </div>
             <div class="search--wrapper">
               <div class="input--wrapper">
-                <input type="text" placeholder="Search by title" />
+                <input type="text" placeholder="Search by title" autofocus />
               </div>
               <figure class="header__btn--wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
