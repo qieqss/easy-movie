@@ -38,6 +38,33 @@ i {
   color: #f06449 !important;
 }
 
+.link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect::after {
+    content: "";
+    bottom: -3px;
+    right: 0;
+    height: 3px;
+    width: 0;
+    background-color: #242424;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect--white::after {
+    background-color: #fff;
+}
+
+.link__hover-effect--black::after {
+    background-color: #242424;
+}
+
+.link__hover-effect:hover::after {
+    left: 0;
+    width: 100%;
+}
+
 /* 
 
 NAV
@@ -59,6 +86,10 @@ nav {
 
 .nav__link {
   margin: 0 24px;
+}
+
+.nav__link:first-child a{
+    font-weight: 600;
 }
 
 .nav__link--anchor {
@@ -198,6 +229,10 @@ SEARCH MOVIES
     align-items: center;
     justify-content: center;
     margin-top: 48px;
+}
+
+.browser__input--wrapper {
+    margin-left: 24px;
 }
 
 .browser__input {
