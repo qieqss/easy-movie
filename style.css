@@ -286,13 +286,21 @@ MOVIES
 
 .movie {
   width: calc(100% / 4);
+  max-width: 250px;
   padding: 0 24px;
   margin: 48px 0 16px 0;
 }
 
-.movie__poster {
+.movie__poster--wrapper {
   width: 100%;
   max-width: 250px;
+  overflow: hidden;
+}
+
+.movie__poster {
+  width: 100%;
+  min-width: 250px;
+  border-radius: 8px;
   cursor: not-allowed;
   transition: transform 300ms ease;
 }
