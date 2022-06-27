@@ -6,7 +6,7 @@ const searchResultEl = document.querySelector(".search__result")
 const id = localStorage.getItem("id")
 
 function onSearchChange(event) {
-  const id= event.target.value
+  const id = event.target.value
   searchResultEl.innerHTML = event.target.value
   renderMovies(id)
 }
@@ -17,13 +17,15 @@ async function renderMovies(search) {
   console.log(moviesData)
   movieEl.innerHTML = moviesData.Search
     .map((search) => moviesHTML(search))
-    .join("")
+    .join("").slice(0, 8)
 }
 
 function moviesHTML(search) {
-  return `<div class="movie">
-      <img src="${search.poster}" class="movie__poster" alt="">
-    </div>`
+  return `
+  <div class="movie">
+      <img src="${search.Poster}" class="movie__poster" alt="">
+    </div>
+    `
 }
 
 renderMovies('fast')
