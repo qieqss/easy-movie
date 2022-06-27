@@ -15,7 +15,7 @@ async function renderMovies(search) {
   const movies = await fetch(`http://www.omdbapi.com/?apikey=f4f98778&s=${search}`)
   const moviesData = await movies.json()
   console.log(moviesData)
-  movieEl.innerHTML = moviesData
+  movieEl.innerHTML = moviesData.Search
     .map((search) => moviesHTML(search))
     .join("")
 }
