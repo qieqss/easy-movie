@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <script src="app.js"></script>
+    <script src="movies.js"></script>
     <script
       src="https://kit.fontawesome.com/bcf4e3b081.js"
       crossorigin="anonymous"
@@ -51,6 +52,7 @@
                 class="browser__input"
                 placeholder="Search by title"
                 autofocus
+                onchange="searchMovies(id)"
               />
             </div>
             <figure class="browser__img--wrapper">
@@ -66,42 +68,77 @@
         <div class="row">
           <div class="search__info">
             <h2>
-              Search results for <span class="search__result orange">""</span>
+              Search results for
+              <span class="orange">
+                "<span class="search__result"></span>"</span>
             </h2>
             <div class="date__filter">
               <h2 class="filter__movies">
                 Date range:
                 <span class="orange">
                   <span class="date__before">1900</span> to
-                  <span class="date__after">2022</span></span>
+                  <span class="date__after">2022</span></span
+                >
               </h2>
               <span class="date__slider"></span>
             </div>
           </div>
           <div class="movies">
             <div class="movie">
-              <img src="./assets/movie-poster-template.jpg" class="movie__poster" alt="">
+              <img
+                src="./assets/movie-poster-template.jpg"
+                class="movie__poster"
+                alt=""
+              />
             </div>
             <div class="movie">
-              <img src="./assets/movie-poster-template.jpg" class="movie__poster" alt="">
+              <img
+                src="./assets/movie-poster-template.jpg"
+                class="movie__poster"
+                alt=""
+              />
             </div>
             <div class="movie">
-              <img src="./assets/movie-poster-template.jpg" class="movie__poster" alt="">
+              <img
+                src="./assets/movie-poster-template.jpg"
+                class="movie__poster"
+                alt=""
+              />
             </div>
             <div class="movie">
-              <img src="./assets/movie-poster-template.jpg" class="movie__poster" alt="">
+              <img
+                src="./assets/movie-poster-template.jpg"
+                class="movie__poster"
+                alt=""
+              />
             </div>
             <div class="movie">
-              <img src="./assets/movie-poster-template.jpg" class="movie__poster" alt="">
+              <img
+                src="./assets/movie-poster-template.jpg"
+                class="movie__poster"
+                alt=""
+              />
             </div>
             <div class="movie">
-              <img src="./assets/movie-poster-template.jpg" class="movie__poster" alt="">
+              <img
+                src="./assets/movie-poster-template.jpg"
+                class="movie__poster"
+                alt=""
+              />
             </div>
             <div class="movie">
-              <img src="./assets/movie-poster-template.jpg" class="movie__poster" alt="">
+              <img
+                src="./assets/movie-poster-template.jpg"
+                class="movie__poster"
+                alt=""
+              />
             </div>
             <div class="movie">
-              <img src="./assets/movie-poster-template.jpg" class="movie__poster" alt="">
+              <img
+                src="./assets/movie-poster-template.jpg"
+                class="movie__poster"
+                alt=""
+              />
             </div>
           </div>
         </div>

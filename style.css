@@ -274,6 +274,10 @@ MOVIES
 
 */
 
+#movies {
+  padding: 0 24px;
+}
+
 .movies {
   display: flex;
   justify-content: space-between;
@@ -281,6 +285,8 @@ MOVIES
 }
 
 .movie {
+  width: calc(100% / 4);
+  padding: 0 24px;
   margin: 48px 0 16px 0;
 }
 
@@ -333,4 +339,7 @@ RESPONSIVENESS
   #up .fa-magnifying-glass {
     font-size: 24px;
   }
+}
+
+@media (max-width: 1024px) {
 }
