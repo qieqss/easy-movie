@@ -36,4 +36,4 @@ function moviesHTML(search) {
     </div>`
 }
 
-renderMovies("stranger things")
+renderMovies("breaking bad")
