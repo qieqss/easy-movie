@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <script src="app.js" defer></script>
     <script
       src="https://kit.fontawesome.com/bcf4e3b081.js"
       crossorigin="anonymous"
@@ -53,13 +54,17 @@
                 Find your dream film with <span class="orange">EasyMovie</span>
               </h2>
             </div>
-            <div class="search--wrapper">
+            <div class="search--wrapper" onchange="onSearchChange(event)">
               <div class="input--wrapper">
-                <input type="text" placeholder="Search by title" autofocus />
+                <input
+                  type="text"
+                  placeholder="Search by title"
+                  autofocus
+                />
               </div>
               <figure class="header__btn--wrapper">
                 <a href="./search-movies.html" class="header__btn--anchor">
-                  <button class="header__btn--anchor btn__submit">
+                  <button class="header__btn--anchor btn__submit" type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
                 </a>
