@@ -10,6 +10,7 @@ async function renderMovies(search) {
     `https://api.themoviedb.org/3/search/movie?api_key=b69c1933d70772560f256dfcc45c6056&query=${search}`
   )
   const moviesData = await movies.json()
+  console.log(moviesData)
 //   const newMoviesData = []
 //   for (let i = 0; i < moviesData.length; ++i) {
 //     if (search.results.poster_path[i] !== null || search.results.poster_path[i] !== undefined) {
@@ -17,6 +18,12 @@ async function renderMovies(search) {
 //     }
 //   }
 //   console.log(newMoviesData)
+
+    if(moviesData.total_results === 0) {
+      document.querySelector(".not__found").style.display = "flex"
+    } else {
+      document.querySelector(".not__found").style.display = "none"
+    }
   moviesEl.innerHTML = /*new*/moviesData.results
     .map((search) => moviesHTML(search))
     .slice(0, 8)

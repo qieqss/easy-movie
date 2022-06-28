@@ -216,7 +216,7 @@ SEARCH MOVIES
 */
 
 #up {
-  min-height: 375px;
+  min-height: 350px;
   background: linear-gradient(#f06449, #ff8c00);
 }
 
@@ -266,6 +266,11 @@ SEARCH MOVIES
 
 #up .fa-magnifying-glass {
   font-size: 32px;
+  transition: color 300ms ease;
+}
+
+#up .fa-magnifying-glass:hover {
+  color: #1da2d8;
 }
 
 /* 
@@ -280,13 +285,14 @@ MOVIES
 
 .movies {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .movie {
   width: calc(100% / 4);
-  max-width: 250px;
+  max-width: 350px;
   padding: 0 24px;
   margin: 48px 0 16px 0;
 }
@@ -306,7 +312,8 @@ MOVIES
 
 .search__info {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* space-between if filter is present */
+  white-space: nowrap;
 }
 
 .btn__submit {
@@ -315,6 +322,7 @@ MOVIES
 }
 
 .not__found {
+  margin-top: 64px;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -324,7 +332,7 @@ MOVIES
 
 .not__found--img {
   width: 100%;
-  max-width: 350px;
+  max-width: 250px;
 }
 
 .not__found figcaption {
@@ -368,5 +376,8 @@ RESPONSIVENESS
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 860px) {
+  .movie {
+    width: calc(100% / 2);
+  }
 }
