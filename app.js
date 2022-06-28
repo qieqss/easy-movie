@@ -28,12 +28,13 @@ async function renderMovies(search) {
   }
   else if (searchResultEl.innerText === "") {
     document.querySelector(".movies").style.display = "none"
+    document.querySelector(".not__found").style.display = "flex"
   }
   else {
     document.querySelector(".movies").style.display = "flex"
     document.querySelector(".not__found").style.display = "none"
   }
-  
+
   moviesEl.innerHTML = /*new*/moviesData.results
     .map((search) => moviesHTML(search))
     .slice(0, 8)
