@@ -10,13 +10,14 @@ async function renderMovies(search) {
     `https://api.themoviedb.org/3/search/movie?api_key=b69c1933d70772560f256dfcc45c6056&query=${search}`
   )
   const moviesData = await movies.json()
-  const newMoviesData = []
-  for (let i = 0; i < moviesData.results.poster_path; ++i) {
-    if (moviesData.results.poster_path[i] !== null || moviesData.results.poster_path[i] !== undefined) {
-      newMoviesData.push[i]
-    }
-  }
-  moviesEl.innerHTML = await newMoviesData.results
+//   const newMoviesData = []
+//   for (let i = 0; i < moviesData.length; ++i) {
+//     if (search.results.poster_path[i] !== null || search.results.poster_path[i] !== undefined) {
+//         newMoviesData.push(moviesData[i])
+//     }
+//   }
+//   console.log(newMoviesData)
+  moviesEl.innerHTML = /*new*/moviesData.results
     .map((search) => moviesHTML(search))
     .slice(0, 8)
     .join("")
@@ -26,7 +27,7 @@ async function onSearchChange(event) {
   event.preventDefault()
   const searchValue = event.target.value
   localStorage.setItem("searchValue", searchValue)
-  await renderMovies(localStorage.getItem("searchValue"))
+  renderMovies(localStorage.getItem("searchValue"))
 }
 
 function moviesHTML(search) {
@@ -40,4 +41,4 @@ function moviesHTML(search) {
     </div>`
 }
 
-// renderMovies(localStorage.getItem("searchValue"))
+renderMovies(localStorage.getItem("searchValue"))
