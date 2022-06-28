@@ -32,7 +32,7 @@
             </li>
             <li class="nav__link">
               <a
-                href="./search-movies.html"
+                href="./search-movies"
                 class="nav__link--anchor link__hover-effect link__hover-effect--black"
                 >Search movies</a
               >
@@ -54,7 +54,7 @@
                 Find your dream film with <span class="orange">EasyMovie</span>
               </h2>
             </div>
-            <div class="search--wrapper" onchange="onSearchChange(event)">
+            <form action="./search-movies" class="search--wrapper" onchange="onSearchChange(event)">
               <div class="input--wrapper">
                 <input
                   type="text"
@@ -63,13 +63,13 @@
                 />
               </div>
               <figure class="header__btn--wrapper">
-                <a href="./search-movies.html" class="header__btn--anchor">
+                <a href="./search-movies" class="header__btn--anchor">
                   <button class="header__btn--anchor btn__submit" type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
                 </a>
               </figure>
-            </div>
+            </form>
             <figure class="header__img--wrapper">
               <img src="./assets/undraw_movie_night_re_9umk.svg" alt="" />
             </figure>
