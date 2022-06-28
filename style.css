@@ -291,15 +291,10 @@ MOVIES
   margin: 48px 0 16px 0;
 }
 
-.movie__poster--wrapper {
-  width: 100%;
-  max-width: 250px;
-  overflow: hidden;
-}
-
 .movie__poster {
   width: 100%;
-  min-width: 250px;
+  max-width: 350px;
+  height: 300px;
   border-radius: 8px;
   cursor: not-allowed;
   transition: transform 300ms ease;
@@ -312,6 +307,30 @@ MOVIES
 .search__info {
   display: flex;
   justify-content: space-between;
+}
+
+.btn__submit {
+  border: none;
+  background-color: transparent;
+}
+
+.not__found {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.not__found--img {
+  width: 100%;
+  max-width: 350px;
+}
+
+.not__found figcaption {
+  margin: 16px 0;
+  font-weight: 700;
+  font-size: 24px;
 }
 
 /* 

@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
-    <script src="app.js"></script>
-    <script src="movies.js" defer></script>
+    <script src="app.js" defer></script>
     <script
       src="https://kit.fontawesome.com/bcf4e3b081.js"
       crossorigin="anonymous"
@@ -45,20 +44,21 @@
         </nav>
         <header class="header">
           <h1 class="header__title">Browse our Movies</h1>
-          <div class="browser--wrapper">
+          <form class="browser--wrapper" onchange="onSearchChange(event)">
             <div class="browser__input--wrapper">
               <input
                 type="text"
                 class="browser__input"
                 placeholder="Search by title"
                 autofocus
-                onchange="onSearchChange(event)"
               />
             </div>
             <figure class="browser__img--wrapper">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <button class="btn__submit" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
             </figure>
-          </div>
+          </form>
         </header>
       </div>
     </section>
@@ -71,14 +71,16 @@
               <h2>
                 Search results for
                 <span class="orange">
-                  "<span class="search__result"></span>"</span>
+                  "<span class="search__result"></span>"</span
+                >
               </h2>
               <div class="date__filter">
                 <h2 class="filter__movies">
                   Date range:
                   <span class="orange">
                     <span class="date__before">1900</span> to
-                    <span class="date__after">2022</span></span>
+                    <span class="date__after">2022</span></span
+                  >
                 </h2>
                 <span class="date__slider"></span>
               </div>
@@ -110,6 +112,11 @@
               <img src="./" class="movie__poster" alt="" />
             </div>
           </div>
+          <figure class="not__found">
+            <img src="./assets/undraw_the_search_s0xf.svg" class="not__found--img" alt="">
+            <figcaption>We searched far and wide, but no movies are to be found🤨</figcaption>
+            <p>Try searching again</p>
+          </figure>
         </div>
       </div>
     </section>
