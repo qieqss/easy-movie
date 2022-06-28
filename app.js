@@ -25,6 +25,7 @@ async function renderMovies(search) {
 
 async function onSearchChange(event) {
   event.preventDefault()
+  console.log(event)
   const searchValue = event.target.value
   localStorage.setItem("searchValue", searchValue)
   renderMovies(localStorage.getItem("searchValue"))
