@@ -28,6 +28,7 @@ async function onSearchChange(event) {
   const searchValue = event.target.value
   localStorage.setItem("searchValue", searchValue)
   renderMovies(localStorage.getItem("searchValue"))
+  searchResultEl.innerText = localStorage.getItem("searchValue")
 }
 
 function moviesHTML(search) {
@@ -42,3 +43,4 @@ function moviesHTML(search) {
 }
 
 renderMovies(localStorage.getItem("searchValue"))
+searchResultEl.innerText = localStorage.getItem("searchValue")
