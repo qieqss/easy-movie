@@ -321,6 +321,37 @@ MOVIES
   background-color: transparent;
 }
 
+/* .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fa-spinner {
+  font-size: 80px;
+  color: #f06449;
+  animation: animate-spinner 725ms infinite linear;
+  cursor: initial;
+}
+
+@keyframes animate-spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
 .not__found {
   margin-top: 64px;
   display: none;
