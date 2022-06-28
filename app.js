@@ -3,12 +3,20 @@
 
 const moviesEl = document.querySelector(".movies")
 const searchResultEl = document.querySelector(".search__result")
-const formEl = document.querySelector('.browser--wrapper')
+const formEl = document.querySelector(".browser--wrapper")
 
 async function renderMovies(search) {
-  const movies = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=b69c1933d70772560f256dfcc45c6056&query=${search}`)
+  const movies = await fetch(
+    `https://api.themoviedb.org/3/search/movie?api_key=b69c1933d70772560f256dfcc45c6056&query=${search}`
+  )
   const moviesData = await movies.json()
-  moviesEl.innerHTML = await moviesData.results
+  const newMoviesData = []
+  for (let i = 0; i < moviesData.results.poster_path; ++i) {
+    if (moviesData.results.poster_path[i] !== null) {
+      newMoviesData.push[i]
+    }
+  }
+  moviesEl.innerHTML = await newMoviesData.results
     .map((search) => moviesHTML(search))
     .slice(0, 8)
     .join("")
@@ -32,4 +40,4 @@ function moviesHTML(search) {
     </div>`
 }
 
-renderMovies(localStorage.getItem("searchValue"))
+// renderMovies(localStorage.getItem("searchValue"))
