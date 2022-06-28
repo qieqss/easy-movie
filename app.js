@@ -12,7 +12,7 @@ async function renderMovies(search) {
   const moviesData = await movies.json()
   const newMoviesData = []
   for (let i = 0; i < moviesData.results.poster_path; ++i) {
-    if (moviesData.results.poster_path[i] !== null) {
+    if (moviesData.results.poster_path[i] !== null || moviesData.results.poster_path[i] !== undefined) {
       newMoviesData.push[i]
     }
   }
