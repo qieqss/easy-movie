@@ -253,6 +253,10 @@ SEARCH MOVIES
   padding-left: 24px;
 }
 
+.browser__input {
+  padding-right: 56px;
+}
+
 .browser__img--wrapper {
   position: absolute;
   right: 0;
@@ -262,6 +266,7 @@ SEARCH MOVIES
   align-items: center;
   justify-content: center;
   margin-right: 16px;
+  padding-left: 16px;
 }
 
 #up .fa-magnifying-glass {
